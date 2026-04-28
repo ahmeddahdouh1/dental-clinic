@@ -150,8 +150,8 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {DOCTORS.map((doc) => (
-              <div key={doc.name} className="group card hover:shadow-cloud-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            {DOCTORS.map((doc, i) => (
+              <Link key={doc.name} href={`/doctors/${i + 1}`} className="group card overflow-hidden hover:shadow-cloud-lg hover:-translate-y-1 transition-all duration-300 block">
                 {/* Doctor image */}
                 <div className="aspect-[3/4] overflow-hidden relative bg-surface-container">
                   <img
@@ -173,13 +173,11 @@ export default function HomePage() {
                     <p className="text-sm text-on-surface-variant font-medium">{doc.spec}</p>
                     <p className="text-xs text-outline mt-0.5">{doc.exp} experience</p>
                   </div>
-                  <Link href="/register">
-                    <button className="w-full py-2.5 bg-surface-container-high text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-colors text-sm">
-                      Book Appointment
-                    </button>
-                  </Link>
+                  <div className="w-full py-2.5 bg-surface-container-high text-primary font-bold rounded-xl text-sm text-center group-hover:bg-primary group-hover:text-white transition-colors">
+                    View Profile & Book
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
