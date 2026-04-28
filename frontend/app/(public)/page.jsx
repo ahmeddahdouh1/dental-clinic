@@ -131,6 +131,33 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── Services section ─────────────────────────────────────────── */}
+        <section className="bg-surface-container-lowest py-16">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="text-center mb-12">
+              <p className="text-label-sm font-bold text-primary tracking-widest uppercase">Our Services</p>
+              <h2 className="text-4xl font-extrabold tracking-tight font-manrope">Comprehensive Care for Every Smile</h2>
+              <p className="text-on-surface-variant max-w-2xl mx-auto mt-4">
+                From preventive dentistry to cosmetic treatments, our clinic offers a wide range of services designed for comfort and long-term oral health.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { title: 'Preventive Care', description: 'Cleanings, exams, and personalized hygiene plans.' },
+                { title: 'Cosmetic Dentistry', description: 'Whitening, veneers, and smile makeovers.' },
+                { title: 'Restorative Treatment', description: 'Fillings, crowns, implants, and root canals.' },
+                { title: 'Emergency Support', description: 'Fast relief for pain, trauma, and urgent care needs.' },
+              ].map((service) => (
+                <div key={service.title} className="rounded-4xl border border-outline-variant/20 bg-surface p-6 shadow-sm hover:shadow-cloud-lg transition-shadow">
+                  <h3 className="text-xl font-bold text-on-surface mb-3">{service.title}</h3>
+                  <p className="text-on-surface-variant leading-relaxed">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── Doctors section ───────────────────────────────────────────── */}
         <section id="doctors" className="max-w-7xl mx-auto px-8 py-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
