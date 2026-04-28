@@ -151,7 +151,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {DOCTORS.map((doc, i) => (
-              <Link key={doc.name} href={`/doctors/${i + 1}`} className="group card overflow-hidden hover:shadow-cloud-lg hover:-translate-y-1 transition-all duration-300 block">
+              <Link key={doc.name} href={`/doctor-profile/${i + 1}`} className="group card overflow-hidden hover:shadow-cloud-lg hover:-translate-y-1 transition-all duration-300 block">
                 {/* Doctor image */}
                 <div className="aspect-[3/4] overflow-hidden relative bg-surface-container">
                   <img
