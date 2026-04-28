@@ -2,10 +2,10 @@
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { PublicNavbar } from '../../../components/layout/PublicNavbar';
-import { Spinner } from '../../../components/ui';
-import { getDoctorImage } from '../../../lib/constants';
-import api from '../../../lib/api';
+import { PublicNavbar } from '../../../../components/layout/PublicNavbar';
+import { Spinner } from '../../../../components/ui';
+import { getDoctorImage } from '../../../../lib/constants';
+import api from '../../../../lib/api';
 
 const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const DAY_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
